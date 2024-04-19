@@ -29,15 +29,17 @@ public class BattleManager : MonoBehaviour
 
     public void ConfirmAction()
     {
+        //You used <color=#E1A521>Melee</color> on <color="red">Goblin</color>
+
         string actionString = "";
 
         if (action == "move")
         {
-            actionString = "You moved " + moveDistance.ToString("F1") + "m";
+            actionString = "You moved <color=#E1A521>" + moveDistance.ToString("F1") + "</color>m";
         }
         else if (!string.IsNullOrEmpty(action) && !string.IsNullOrEmpty(target))
         {
-            actionString = "You used " + action + " on " + target;
+            actionString = "You used <color=#E1A521>" + action + "</color> on <color=\"red\">" + target + "</color>";
         }
 
         if (!string.IsNullOrEmpty(actionString))
